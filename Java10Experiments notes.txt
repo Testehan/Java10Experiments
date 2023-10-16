@@ -1,0 +1,25 @@
+Check here all new features of Java 10 : https://openjdk.org/projects/jdk/10/
+
+
+JDK 10 new features
+
+    1.JEP 286: Local-Variable Type Inference
+        We seek to improve the developer experience by reducing the ceremony associated with writing Java code,
+        while maintaining Java's commitment to static type safety, by allowing developers to elide the
+        often-unnecessary manifest declaration of local variable types. This feature would allow, for example,
+        declarations such as:
+            var list = new ArrayList<String>();  // infers ArrayList<String>
+            var stream = list.stream();          // infers Stream<String>
+
+        This treatment would be restricted to local variables with initializers, indexes in the enhanced
+        for-loop, and locals declared in a traditional for-loop; it would not be available for method formals,
+        constructor formals, method return types, fields, catch formals, or any other kind of variable declaration.
+
+        Description
+            The identifier var is not a keyword; instead it is a reserved type name. This means that code that uses
+            var as a variable, method, or package name will not be affected; code that uses var as a class or
+            interface name will be affected (but these names are rare in practice, since they violate usual
+            naming conventions).
+
+
+TODO Create git repo
